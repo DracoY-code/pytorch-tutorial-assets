@@ -1,5 +1,4 @@
-"""This script imports the utility functions from the ./scripts directory.
-"""
+"""This script imports the utility functions from the ./scripts directory."""
 
 import os
 import sys
