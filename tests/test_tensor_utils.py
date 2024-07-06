@@ -50,3 +50,25 @@ def test_normalization(random_tensor: Dict[str, Any]) -> None:
     print(f'\nDenormalized Tensor:\n{denormalized_tensor}')
 
     assert denormalized_tensor.size() == normalized_tensor.size()
+
+
+def test_backward_traversal() -> None:
+    """Tests if the backward traversal function is working correctly."""
+    # Setup inputs
+    inputs = tensor_utils.create_random_tensor(
+        size=(1, 3, 3, 3),
+        requires_grad=True,
+    )
+
+    # Perform computations
+    x = tensor_utils.torch.sin(inputs)
+    x = tensor_utils.torch.log(x)
+    x = tensor_utils.torch.abs(x)
+    x = tensor_utils.torch.sigmoid(x)
+    output = tensor_utils.torch.mean(x)
+
+    # Get backward traversal data
+    print()
+    tensor_utils.print_backward_traversal(output)
+
+    assert True

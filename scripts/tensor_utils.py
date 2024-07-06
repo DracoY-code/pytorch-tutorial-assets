@@ -4,7 +4,7 @@ Tensor Utilities
 This module defines various utility functions for tensor manipulation.
 """
 
-from typing import Optional, Sequence, Union
+from typing import Any, Optional, Sequence, Union
 
 from numpy.typing import ArrayLike
 
@@ -128,3 +128,46 @@ def denormalize(x: Tensor, *, mean: ArrayLike, std: ArrayLike) -> Tensor:
 
     # Denormalize the tensor
     return x * std + mean
+
+
+def print_backward_traversal(tensor: Tensor) -> None:
+    """
+    Prints the backward traversal of a computation graph starting from the given tensor.
+
+    This function walks backwards from the specified tensor's gradient function through
+    the computation graph and prints each function in the path until it reaches the
+    beginning of the graph.
+
+    Args:
+        tensor (Tensor): The tensor from which to start the backward traversal.
+    """
+    def get_var_name(var: Any) -> Optional[str]:
+        """
+        Retrieves the variable name of the given variable from the global scope.
+
+        Args:
+            var (Any): The variable for which to find the name.
+
+        Returns:
+            Optional[str]: The name of the variable if found, otherwise None.
+        """
+        names = list(filter(
+            lambda x: not x.startswith('_'),
+            [name for name, val in globals().items() if val is var],
+        ))
+        return names[0] if names else None
+    
+    # Write the header line
+    tensor_name = get_var_name(tensor)
+    print(f'Walking backwards from `{tensor_name}`:')
+
+    # Print the traversal until `tensor.grad_fn` is None
+    curr_grad_fn = tensor.grad_fn
+    while curr_grad_fn is not None:
+        print(curr_grad_fn)
+        curr_grad_fn = (
+            curr_grad_fn.next_functions[0][0]
+            if curr_grad_fn.next_functions
+            else None
+        )
+    print('Root node of computation graph reached!')
