@@ -68,7 +68,8 @@ def test_backward_traversal() -> None:
     output = tensor_utils.torch.mean(x)
 
     # Get backward traversal data
-    print()
+    print(f'\nInputs:\n{inputs}')
+    print(f'\nOutput: {output}\n')
     tensor_utils.print_backward_traversal(output)
 
     assert True
