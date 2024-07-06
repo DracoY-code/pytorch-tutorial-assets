@@ -4,7 +4,7 @@ Plotting Utilities
 This module defines various utility functions for plotting images and graphs.
 """
 
-from typing import Optional
+from typing import Optional, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -43,3 +43,33 @@ def plot_image(
     # Plot the image
     plt.imshow(np.transpose(img.numpy().squeeze(), (1, 2, 0)))
     plt.title(label)
+
+
+def relplot(
+    x: Tensor,
+    y: Tensor,
+    *,
+    xlabel: Optional[str],
+    ylabel: Optional[str],
+    title: Optional[str],
+    figsize: Tuple[int, int] = (6.4, 4.8),
+) -> None:
+    """
+    Plots the relationship between two 1-D tensors.
+
+    Args:
+        x (Tensor): The tensor on the x-axis.
+        y (Tensor): The tensor on the y-axis.
+        xlabel (Optional[str]): The label on the x-axis.
+        ylabel (Optional[str]): The label on the y-axis.
+        title (Optional[str]): The title of the plot.
+        figsize (Tuple[int, int], optional):\
+            The size of the plot. Defaults to (6.4, 4.8).
+    """
+    plt.figure(figsize=figsize)
+    plt.plot(x, y, '--')
+    plt.xlabel(xlabel=xlabel)
+    plt.ylabel(ylabel=ylabel)
+    plt.title(title)
+    plt.grid()
+    plt.show()
