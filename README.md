@@ -12,14 +12,6 @@ This repository contains all the notebooks, models, scripts, and other assets I 
 
 ## Repository Assets
 
-<!-- Table Styles -->
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>
-
 ### Notebooks
 
 The `notebooks/` directory stores various notebooks referenced from the tutorial. It contains the following:
@@ -29,46 +21,41 @@ The `notebooks/` directory stores various notebooks referenced from the tutorial
 <table>
   <thead>
     <tr>
-      <th class=center>S. No.</th>
-      <th class=center>Name</th>
-      <th class=center>Description</th>
-      <th class=center>Key Concepts Covered</th>
-      <th class=center>Dependencies</th>
-      <th class=center>Notebook</th>
+      <th align=center>S. No.</th>
+      <th align=center>Notebook</th>
+      <th align=center>Description</th>
+      <th align=center>Key Concepts Covered</th>
+      <th align=center>Dependencies</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td class=center>1.</td>
-      <td>Introduction to PyTorch</td>
-      <td>Introduction to basic PyTorch concepts and training a <a href=http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf>LeNet-5</a> model on the <a href=https://paperswithcode.com/dataset/cifar-10><code>CIFAR10</code></a> dataset</td>
+      <td align=center>1.</td>
+      <td align=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/01_introduction_to_pytorch.ipynb>01_introduction_to_pytorch.ipynb</a></code></td>
+      <td>Introduction to basic PyTorch concepts and training a LeNet-5 model on the <a href=https://paperswithcode.com/dataset/cifar-10><code>CIFAR10</code></a> dataset</td>
       <td>Tensors, Autograd, Models, Datasets, Data Loaders, CNN</td>
       <td><code>matplotlib</code>, <code>numpy</code>, <code>torch</code>, <code>torchvision</code></td>
-      <td class=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/01_introduction_to_pytorch.ipynb>01_introduction_to_pytorch.ipynb</a></code></td>
     </tr>
     <tr>
-      <td class=center>2.</td>
-      <td>Introduction to PyTorch Tensors</td>
+      <td align=center>2.</td>
+      <td align=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/02_introduction_to_pytorch_tensors.ipynb>02_introduction_to_pytorch_tensors.ipynb</a></code></td>
       <td>Introduction to basic PyTorch tensor operations</td>
       <td>Tensors - Creation and Operations, Tensor Manipulation</td>
       <td><code>numpy</code>, <code>torch</code></td>
-      <td class=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/02_introduction_to_pytorch_tensors.ipynb>02_introduction_to_pytorch_tensors.ipynb</a></code></td>
     </tr>
     <tr>
-      <td class=center>3.</td>
-      <td>The Fundamentals of Autograd</td>
+      <td align=center>3.</td>
+      <td align=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/03_the_fundamentals_of_autograd.ipynb>03_the_fundamentals_of_autograd.ipynb</a></code></td>
       <td>Understanding the Need of Autograd and its Applications</td>
       <td>Autograd, Gradients, Weights and Biases, Autograd Profiler</td>
       <td><code>matplotlib</code>, <code>numpy</code>, <code>torch</code></td>
-      <td class=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/03_the_fundamentals_of_autograd.ipynb>03_the_fundamentals_of_autograd.ipynb</a></code></td>
     </tr>
     <tr>
-      <td class=center>4.</td>
-      <td>Building Models with PyTorch</td>
+      <td align=center>4.</td>
+      <td align=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/04_building_models_with_pytorch.ipynb>04_building_models_with_pytorch.ipynb</a></code></td>
       <td>Implementing different models and examining various layer types</td>
       <td>Model Parameters, Layers - Linear, Convolutional, Recurrent, Pooling, Normalization, Dropout, Activation and Loss Functions</td>
       <td><code>numpy</code>, <code>torch</code></td>
-      <td class=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/04_building_models_with_pytorch.ipynb>04_building_models_with_pytorch.ipynb</a></code></td>
     </tr>
   </tbody>
 </table>
