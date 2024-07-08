@@ -2,9 +2,9 @@
 
 <!-- Badges -->
 
-![Python](https://img.shields.io/badge/Python-3.10.13-grey?logo=python&labelColor=white&style=plastic)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.3.1-grey?logo=pytorch&labelColor=white&style=plastic)
-![NumPy](https://img.shields.io/badge/NumPy-1.26.4-grey?logo=numpy&labelColor=white&style=plastic)
+![Python](https://img.shields.io/badge/Python-3.10.13-grey?logo=python&labelColor=black&style=flat)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.3.1-grey?logo=pytorch&labelColor=black&style=flat)
+![NumPy](https://img.shields.io/badge/NumPy-1.26.4-grey?logo=numpy&labelColor=black&style=flat)
 
 <!-- Introduction -->
 
