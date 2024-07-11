@@ -20,6 +20,7 @@ def plot_image(
     label: Optional[str] = None,
     mean: Optional[Tensor] = None,
     std: Optional[Tensor] = None,
+    is_one_channel: bool = False,
 ) -> None:
     """
     Plots the image.
@@ -35,13 +36,22 @@ def plot_image(
             Mean values for each channel. Defaults to None.
         std (Optional[Tensor], optional):\
             Standard deviation values for each channel. Defaults to None.
+        is_one_channel (bool):\
+            Flag indicating if monochromatic image is to plotted. Defaults to False.
     """
+    # Ensure that one channel is used, if activated
+    if is_one_channel:
+        img = img.mean(dim=0)
+        
     # Denormalize the image tensor, if normalized
     if is_norm:
         img = tensor_utils.denormalize(img, mean=mean, std=std)
 
     # Plot the image
-    plt.imshow(np.transpose(img.numpy().squeeze(), (1, 2, 0)))
+    if is_one_channel:
+        plt.imshow(img.numpy(), cmap='Greys')
+    else:
+        plt.imshow(np.transpose(img.numpy().squeeze(), (1, 2, 0)))
     plt.title(label)
 
 

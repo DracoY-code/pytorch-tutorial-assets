@@ -12,9 +12,6 @@ import torch
 from torch import SymInt, Tensor
 from torch.types import _bool, _dtype, _int, _layout, Device
 
-# Import custom error handlers
-from errors import ChannelMismatchError
-
 
 def create_random_tensor(
     size: Sequence[Union[_int, SymInt]],
@@ -82,20 +79,12 @@ def normalize(x: Tensor, *, mean: ArrayLike, std: ArrayLike) -> Tensor:
         mean (ArrayLike): Mean values for each channel.
         std (ArrayLike): Standard deviation values for each channel.
 
-    Raises:
-        ChannelMismatchError: If the number of channels in the tensor `x` does\
-            not match the length of `mean` and `std`.
-
     Returns:
         Tensor: Normalized tensor with the same shape as `x`.
     """
     # Convert arrays to tensors
     mean = torch.Tensor(mean)
     std = torch.Tensor(std)
-    
-    # Check if the number of channels matches
-    if x.size(1) != mean.size(0) or x.size(1) != std.size(0):
-        raise ChannelMismatchError
 
     # Normalize the tensor
     return (x - mean) / std
@@ -111,20 +100,12 @@ def denormalize(x: Tensor, *, mean: ArrayLike, std: ArrayLike) -> Tensor:
         mean (ArrayLike): Mean values for each channel.
         std (ArrayLike): Standard deviation values for each channel.
 
-    Raises:
-        ChannelMismatchError: If the number of channels in the tensor `x` does\
-            not match the length of `mean` and `std`.
-
     Returns:
         Tensor: Denormalized tensor with the same shape as `x`.
     """
     # Convert arrays to tensors
     mean = torch.Tensor(mean)
     std = torch.Tensor(std)
-    
-    # Check if the number of channels matches
-    if x.size(1) != mean.size(0) or x.size(1) != std.size(0):
-        raise ChannelMismatchError
 
     # Denormalize the tensor
     return x * std + mean
