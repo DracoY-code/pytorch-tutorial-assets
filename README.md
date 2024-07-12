@@ -85,6 +85,8 @@ The `data/` directory includes any external data associated with this repository
 The `images/` directory includes images used in this repository, including:
 
 - [`kabo-p6yH8VmGqxo-unsplash.jpg`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/images/kabo-p6yH8VmGqxo-unsplash.jpg): An image of a cat ([source](https://unsplash.com/photos/orange-tabby-cat-on-yellow-surface-p6yH8VmGqxo)).
+- [`dulcey-lima-IBvDcZgXym4-unsplash.jpg`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/images/dulcey-lima-IBvDcZgXym4-unsplash.jpg): An image of a bullfrog ([source](https://unsplash.com/photos/brown-and-black-frog-on-green-leaf-IBvDcZgXym4)).
+- [`karl-anderson-9DqdOsVUC10-unsplash.jpg`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/images/karl-anderson-9DqdOsVUC10-unsplash.jpg): An image of an otter ([source](https://unsplash.com/photos/closeup-photo-of-swimming-rodent-9DqdOsVUC10)).
 
 ### Models
 
