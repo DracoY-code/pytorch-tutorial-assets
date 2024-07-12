@@ -57,6 +57,13 @@ The `notebooks/` directory stores various notebooks referenced from the tutorial
       <td>Model Parameters, Layers - Linear, Convolutional, Recurrent, Pooling, Normalization, Dropout, Activation and Loss Functions</td>
       <td><code>numpy</code>, <code>torch</code></td>
     </tr>
+    <tr>
+      <td align=center>5.</td>
+      <td align=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/06_training_with_pytorch.ipynb>06_training_with_pytorch.ipynb</a></code></td>
+      <td>Training a classifier on the <a href=https://www.kaggle.com/datasets/zalando-research/fashionmnist><code>Fashion-MNIST</code></a> dataset</td>
+      <td>Model Training, Training and Validation Loss, Training and Validation Accuracy</td>
+      <td><code>matplotlib</code>, <code>sklearn</code>, <code>torch</code>, <code>torchvision</code></td>
+    </tr>
   </tbody>
 </table>
 
@@ -64,8 +71,9 @@ The `notebooks/` directory stores various notebooks referenced from the tutorial
 
 The `models/` directory includes various custom models saved for future reference. The following models can be found:
 
-- [`01_lenet5.pt`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/models/01_lenet5.pt)
-- [`04_lstm_tagger.pt`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/models/04_lstm_tagger.pt)
+- [`01_lenet5.pt`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/models/01_lenet5.pt): CNN model based on the LeNet-5 architecture.
+- [`04_lstm_tagger.pt`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/models/04_lstm_tagger.pt): LSTM-based RNN model that tags words in a sentence.
+- [`06_fashion_clf.pt`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/models/06_fashion_clf.pt): CNN model to classify images from the Fashion MNIST dataset.
 
 ### Scripts
 
