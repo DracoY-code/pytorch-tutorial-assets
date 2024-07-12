@@ -64,8 +64,27 @@ The `notebooks/` directory stores various notebooks referenced from the tutorial
       <td>Model Training, Training and Validation Loss, Training and Validation Accuracy</td>
       <td><code>matplotlib</code>, <code>sklearn</code>, <code>torch</code>, <code>torchvision</code></td>
     </tr>
+    <tr>
+      <td align=center>6.</td>
+      <td align=center><code><a href=https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/notebooks/07_model_understanding_with_captum.ipynb>07_model_understanding_with_captum.ipynb</a></code></td>
+      <td>Using Captum for model interpretability by handling feature and layer attributions</td>
+      <td>Model Interpretability, Feature Attributions, Layer Attributions, Captum Insights</td>
+      <td><code>captum</code>, <code>matplotlib</code>, <code>numpy</code>, <code>PIL</code>, <code>torch</code></td>
+    </tr>
   </tbody>
 </table>
+
+### Data
+
+The `data/` directory includes any external data associated with this repository. This contains:
+
+- [`imagenet_class_index.json`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/data/imagenet_class_index.json): Class indices for the ImageNet labels.
+
+### Images
+
+The `images/` directory includes images used in this repository, including:
+
+- [`kabo-p6yH8VmGqxo-unsplash.jpg`](https://github.com/DracoY-code/pytorch-tutorial-assets/blob/main/images/kabo-p6yH8VmGqxo-unsplash.jpg): An image of a cat ([source](https://unsplash.com/photos/orange-tabby-cat-on-yellow-surface-p6yH8VmGqxo)).
 
 ### Models
 
@@ -95,5 +114,5 @@ The tests can be run by using the following `zsh` script:
 
 ## Resources
 
-- [PyTorch Beginner Series](https://www.youtube.com/playlist?list=PL_lsbAsL_o2CTlGHgMxNrKhzP97BaG9ZN) on YouTube
-- [PyTorch Tutorial Notebooks](https://pytorch.org/tutorials/beginner/basics/intro.html)
+- [PyTorch Beginner Series](https://www.youtube.com/playlist?list=PL_lsbAsL_o2CTlGHgMxNrKhzP97BaG9ZN) on YouTube.
+- [PyTorch Tutorial Notebooks](https://pytorch.org/tutorials/beginner/basics/intro.html).
