@@ -116,6 +116,3 @@ The tests can be run by using the following `zsh` script:
 
 - [PyTorch Beginner Series](https://www.youtube.com/playlist?list=PL_lsbAsL_o2CTlGHgMxNrKhzP97BaG9ZN) on YouTube.
 - [PyTorch Tutorial Notebooks](https://pytorch.org/tutorials/beginner/basics/intro.html).
-- [Captum Documentation](https://captum.ai/docs/introduction).
-- [Captum API Reference](https://captum.ai/api/).
-- [Captum Insights API Reference](https://captum.ai/api/insights.html)
