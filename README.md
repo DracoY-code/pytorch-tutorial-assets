@@ -111,7 +111,7 @@ The `tests/` directory includes unit tests for the notebooks and the scripts in 
 The tests can be run by using the following `zsh` script:
 
 ```zsh
-% ./run_tests.zsh
+$ ./run_tests.zsh
 ```
 
 ## Resources
